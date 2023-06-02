@@ -6,10 +6,13 @@ import {
   Route,
   createRoutesFromElements
 } from "react-router-dom";
-import App from './App'
-import Home from './pages/Home'
+
 import './index.scss'
 import './fonts/blackpast.ttf'
+
+import App from './App'
+import Home from './pages/Home'
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(

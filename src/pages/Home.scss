@@ -1,0 +1,28 @@
+#home {
+    // min-height: 100vh;
+    height: 100vh;
+    padding: 12vh 8rem 0 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+
+    // background: #070518 url("https://img.freepik.com/free-photo/aesthetic-minimal-white-grid-pattern-wallpaper_53876-96916.jpg?w=2000") no-repeat center center;
+    // background-size: cover;
+    // background-blend-mode: color-burn;
+
+    .hero {
+        width: 100%;
+        display: flex;
+        flex: 1;
+        border-radius: 48px;
+        overflow: hidden;
+        // border: 1px solid #070518;
+        box-shadow: 0 0 100px 20px #0DCDBA80;
+
+        img {
+            flex: 1;
+            object-fit: cover;
+        }
+    }
+}

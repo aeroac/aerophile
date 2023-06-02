@@ -1,9 +1,9 @@
 function Footer() {
 
     return (
-    <nav>
+    <footer>
         <p>Aaand this is the end. Byee!!!</p>
-    </nav>
+    </footer>
     )
 }
 

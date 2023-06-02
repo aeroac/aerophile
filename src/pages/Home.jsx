@@ -1,9 +1,12 @@
+import "./Home.scss"
+
 function Home() {
 
     return (
-    <main>
-        <p>Hii this is homepage!!! :D</p>
-        <p>AEROPHILE 23 Redefined 🙀</p>
+    <main id="home">
+        <div className="hero">
+            <img src="/src/assets/landing-2.png" />
+        </div>
     </main>
     )
 }
