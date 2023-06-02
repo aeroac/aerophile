@@ -10,7 +10,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    // scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar { //!!TODO: TEMP
+    display: none;
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -1,28 +1,79 @@
-#home {
-    // min-height: 100vh;
-    height: 100vh;
-    padding: 12vh 8rem 0 8rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: stretch;
+#landing {
+    height: 120vh;
+    padding-top: 12vh;
+    position: relative;
+    overflow-x: hidden;
 
-    // background: #070518 url("https://img.freepik.com/free-photo/aesthetic-minimal-white-grid-pattern-wallpaper_53876-96916.jpg?w=2000") no-repeat center center;
-    // background-size: cover;
-    // background-blend-mode: color-burn;
+    // border-bottom: 1px solid red;
+
+    $hm: 8rem; //hero margin
 
     .hero {
-        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 12vh;
+        height: 88vh;
+        width: auto;
         display: flex;
-        flex: 1;
-        border-radius: 48px;
-        overflow: hidden;
-        // border: 1px solid #070518;
-        box-shadow: 0 0 100px 20px #0DCDBA80;
+        transition: .5s;
+        z-index: 1;
+        
+        &:active {
+            left: -100vw;
+        }
+        
+        .hero-card {
+            border-radius: 48px;
+            display: flex;
+            width: calc(100vw - $hm*2);
+            margin: 0 $hm;
 
-        img {
-            flex: 1;
-            object-fit: cover;
+            background: red no-repeat center center;
+            background-size: cover;
+            box-shadow: 0px -10px 64px 12px white;
+            box-shadow: 0px -8px 100px 24px rgba(#0DCDBA, .4);
+
+            &:nth-child(1) {
+                background-image: url("/src/assets/hero-1.png");
+            }
+
+            &:nth-child(2) {
+                background-image: url("/src/assets/hero-2.png");
+            }
+            &:nth-child(3) {
+                background-image: url("/src/assets/hero-3.png");
+            }
+            &:nth-child(4) {
+                background-image: url("/src/assets/hero-4.png");
+            }
         }
     }
+    
+    .content {
+        z-index: 2;
+        position: relative;
+        height: 88vh;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 12vh;
+        pointer-events: none;
+        
+        .cta {
+            display: flex;
+            width: fit-content;
+            background: #00000033;
+            backdrop-filter: blur(20px);
+            border: 1px solid #0DCDBA33;
+            text-transform: uppercase;
+            padding: 1rem 4rem;
+            border-radius: 1000px;
+            font-size: 1.2rem;
+            pointer-events: auto;
+        }
+    }
+}
+
+#campaign {
+    height: 100vh;
 }

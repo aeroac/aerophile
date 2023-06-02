@@ -7,9 +7,9 @@ function Nav() {
     return (
     <nav>
         <div className="branding">
-            <Link to="/">
+            {/* <Link to="/"> */}
                 <img src="/src/assets/aaac.png"></img>
-            </Link>
+            {/* </Link> */}
         </div>
         <div className="links">
             <NavLink to="/">Home</NavLink>
