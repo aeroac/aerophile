@@ -15,12 +15,13 @@
         height: 88vh;
         width: auto;
         display: flex;
-        transition: .5s;
+        // transition: .5s;
         z-index: 1;
-        
-        &:active {
-            left: -100vw;
-        }
+
+
+        // &:active {
+        //     left: -100vw;
+        // }
         
         .hero-card {
             border-radius: 48px;
@@ -30,13 +31,12 @@
 
             background: red no-repeat center center;
             background-size: cover;
-            box-shadow: 0px -10px 64px 12px white;
-            box-shadow: 0px -8px 100px 24px rgba(#0DCDBA, .4);
+            box-shadow: 0px 0px 100px 24px rgba(#0DCDBA, .4);
+            transform-origin: center bottom;
 
             &:nth-child(1) {
                 background-image: url("/src/assets/hero-1.png");
             }
-
             &:nth-child(2) {
                 background-image: url("/src/assets/hero-2.png");
             }
@@ -66,14 +66,81 @@
             backdrop-filter: blur(20px);
             border: 1px solid #0DCDBA33;
             text-transform: uppercase;
-            padding: 1rem 4rem;
             border-radius: 1000px;
             font-size: 1.2rem;
+            box-shadow: 1px 1px 4px 0px #0DCDBA, -1px -1px 4px 0px #abede6;
             pointer-events: auto;
+            
+            a {
+                display: flex;
+                padding: 1rem 4rem;
+            }
         }
     }
 }
 
 #campaign {
-    height: 100vh;
+    margin-bottom: 12vh;
+
+    .header {
+        height: 24rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .title-background {
+            position: absolute;
+            height: 100%;
+            left: -16px;
+
+            img {
+                height: 100%;
+            }
+
+            // &:hover {
+            //     left: -200px
+            // }
+        }
+
+        .title {
+            font-size: 6rem;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+
+            text-shadow:
+                /* White glow */
+                0 0 7px #ffffff33,
+                0 0 10px #ffffff33,
+                0 0 21px #ffffff33,
+                /* Green glow */
+                0 0 42px #0DCDBA,
+                0 0 82px #0DCDBA,
+                0 0 92px #0DCDBA,
+                0 0 102px #0DCDBA,
+                0 0 151px #0DCDBA;
+        }
+    }
+
+    .post-cards {
+        margin: 12vh 8rem 0 8rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 4rem;
+
+        .card {
+            display: flex;
+            border-radius: 24px;
+            overflow: hidden;
+            aspect-ratio: 16/9;
+            cursor: pointer;
+
+            img {
+                // display: flex;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
 }
