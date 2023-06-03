@@ -12,12 +12,16 @@ import './fonts/blackpast.ttf'
 
 import App from './App'
 import Home from './pages/Home'
+import Post from './pages/Post'
+import PostAll from './pages/PostAll'
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<Home />} />
+      <Route path="/:postCat" element={<PostAll />} />
+      <Route path="/:postCat/:postName" element={<Post />} />
     </Route>
   )
 )

@@ -6,6 +6,7 @@ import cardImage1 from "/src/assets/hero-1.png"
 import cardImage2 from "/src/assets/hero-2.png"
 import cardImage3 from "/src/assets/hero-3.png"
 import cardImage4 from "/src/assets/hero-4.png"
+import PostCard from "/src/components/PostCard"
 import "./Home.scss"
 
 function Home() {
@@ -49,61 +50,10 @@ function Home() {
                 </div>
             </div>
             <div className="post-cards">
-                
-                <motion.div className="card"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ type: "spring" }}
-                    whileTap={{ scale: .95 }}
-                >
-                    <motion.img src={ cardImage1 }
-                        initial={{scale: 1.1 }}
-                        whileHover={{ scale: 1.2 }}
-                        whileTap={{ scale: 1.05 }}
-                        transition={{ type: "spring" }}
-                    />
-                    <p>HISTORY</p>
-                </motion.div>
-
-                {/* TEMP */}
-                <motion.div className="card"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ type: "spring" }}
-                    whileTap={{ scale: .95 }}
-                >
-                    <motion.img src={ cardImage2 }
-                        initial={{scale: 1.1 }}
-                        whileHover={{ scale: 1.2 }}
-                        whileTap={{ scale: 1.05 }}
-                        transition={{ type: "spring" }}
-                    />
-                    <p>HISTORY</p>
-                </motion.div><motion.div className="card"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ type: "spring" }}
-                    whileTap={{ scale: .95 }}
-                >
-                    <motion.img src={ cardImage3 }
-                        initial={{scale: 1.1 }}
-                        whileHover={{ scale: 1.2 }}
-                        whileTap={{ scale: 1.05 }}
-                        transition={{ type: "spring" }}
-                    />
-                    <p>HISTORY</p>
-                </motion.div><motion.div className="card"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ type: "spring" }}
-                    whileTap={{ scale: .95 }}
-                >
-                    <motion.img src={ cardImage4 }
-                        initial={{scale: 1.1 }}
-                        whileHover={{ scale: 1.2 }}
-                        whileTap={{ scale: 1.05 }}
-                        transition={{ type: "spring" }}
-                    />
-                    <p>HISTORY</p>
-                </motion.div>
-                {/* END TEMP */}
-
+                <PostCard image={ cardImage1 } url="/cat" />
+                <PostCard image={ cardImage2 } url="/dog" />
+                <PostCard image={ cardImage3 } url="/rabbit" />
+                <PostCard image={ cardImage4 } url="/alsocatuwu" />
             </div>
         </section>
     </main>
