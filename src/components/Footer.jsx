@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom"
+import aaacLogo from "/src/assets/aaac.png"
+import aerophileLogo from "/src/assets/aerophilelk.png"
 import "./Footer.scss"
 
 function Footer() {
@@ -7,8 +9,8 @@ function Footer() {
     <footer>
         <div className="content">
             <div className="branding">
-                <img src="/src/assets/aaac.png" />
-                <img src="/src/assets/aerophilelk.png" />
+                <img src={ aaacLogo } />
+                <img src={ aerophileLogo } />
             </div>
             <div className="org">
                 <p>2023 ©️ Aeronautical Academy of Ananda College</p>

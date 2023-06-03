@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { InstagramLogo, FacebookLogo, YoutubeLogo } from "@phosphor-icons/react";
+import aaacLogo from "/src/assets/aaac.png"
 import "./Nav.scss"
 
 function Nav() {
@@ -7,9 +8,7 @@ function Nav() {
     return (
     <nav>
         <div className="branding">
-            {/* <Link to="/"> */}
-                <img src="/src/assets/aaac.png"></img>
-            {/* </Link> */}
+            <img src={ aaacLogo }></img>
         </div>
         <div className="links">
             <NavLink to="/">Home</NavLink>
