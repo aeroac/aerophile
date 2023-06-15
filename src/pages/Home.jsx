@@ -31,6 +31,7 @@ function Home() {
                 <div className="hero-card" index={3} />
             </div>
             <div className="content">
+                <h1>The premier aviation news portal in srilanka</h1>
                 <motion.div className="cta"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: .9 }}

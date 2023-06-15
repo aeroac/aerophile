@@ -1,0 +1,46 @@
+#post-header {
+    // border: 1px solid red;
+    padding: 0 8rem 0 8rem;
+
+    img {
+        height: 30vh;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0 0 48px 48px;
+        box-shadow: 0px 0px 100px 24px rgba(#0DCDBA, .4);
+    }
+
+    h1 {
+        margin-top: 4rem;
+        text-transform: uppercase;
+        font-size: 4rem;
+        font-weight: bold;
+    }
+
+    p {
+        opacity: .8;
+    }
+}
+
+#post-content {
+    margin: 4rem 8rem 8rem 8rem;
+    font-size: 1.2rem;
+    min-height: calc(30vh + 8rem);
+    
+    p {
+        opacity: .8;
+    }
+
+    .no-content-cta {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        width: fit-content;
+        opacity: .8; 
+        transition: .2s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

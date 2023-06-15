@@ -29,7 +29,7 @@
             width: calc(100vw - $hm*2);
             margin: 0 $hm;
 
-            background: red no-repeat center center;
+            background: #070518 no-repeat center center;
             background-size: cover;
             box-shadow: 0px 0px 100px 24px rgba(#0DCDBA, .4);
             transform-origin: center bottom;
@@ -54,10 +54,30 @@
         position: relative;
         height: 88vh;
         display: flex;
-        align-items: flex-end;
-        justify-content: center;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        gap: 2rem;
         padding-bottom: 12vh;
         pointer-events: none;
+
+        h1 {
+            // font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            text-shadow:
+            /* White glow */
+            0 0 7px #ffffff33,
+            0 0 10px #ffffff33,
+            0 0 21px #ffffff33,
+            /* Green glow */
+            0 0 4px #0DCDBA,
+            0 0 24px #0DCDBA,
+            0 0 48px #0DCDBA,
+            0 0 64px #0DCDBA,
+            0 0 96px #0DCDBA,
+        }
         
         .cta {
             display: flex;

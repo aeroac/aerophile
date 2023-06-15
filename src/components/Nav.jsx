@@ -13,7 +13,7 @@ function Nav() {
         <div className="links">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/">About</NavLink>
-            <NavLink to="/">Facts</NavLink>
+            <NavLink to="/#campaign">Facts</NavLink>
             <NavLink to="/">Contact</NavLink>
         </div>
         <div className="socials">
