@@ -8,7 +8,7 @@ import { ArrowLeft } from "@phosphor-icons/react"
 import "./Post.scss"
 
 function Post() {
-    const { postID } = useParams()
+    const { catID, postID } = useParams()
     const [status, setStatus] = useState("loading")
     const [data, setData] = useState({})
 
@@ -17,8 +17,14 @@ function Post() {
             const data = await getDoc(doc(db, "posts", postID))
             if (data.exists()) {
                 console.log(data.data())
-                setData(data.data())
-                setStatus("success")
+                if (data.data().category == catID) {
+                    setData(data.data())
+                    setStatus("success")
+                }
+                else {
+                    console.log("Yes data but no cat :(")
+                    setStatus("na")
+                }
             }
             else {
                 console.log("No data though :(")
@@ -61,7 +67,7 @@ function Post() {
             <header id="post-header">
             <motion.img src="/src/assets/hero-1.png" 
                 initial={{ height: "30vh" }}
-                animate={{ height: "0vh", "marginBottom": "30vh" }}
+                animate={{ height: "0vh" }}
                 transition={{ type: "spring" }}
             />
             <h1>No Content Found :(</h1>

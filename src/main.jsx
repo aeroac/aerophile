@@ -20,8 +20,8 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<Home />} />
-      <Route path="/:postCAT" element={<PostAll />} />
-      <Route path="/:postCAT/:postID" element={<Post />} />
+      <Route path="/:catID" element={<PostAll />} />
+      <Route path="/:catID/:postID" element={<Post />} />
     </Route>
   )
 )
