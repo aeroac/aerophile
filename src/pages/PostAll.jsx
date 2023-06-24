@@ -69,7 +69,7 @@ function PostAll() {
             <section id="postall-content">
                 { data.map((doc, index) => {
                 return (
-                <PostCard key={ index } image={ doc.image } url={ doc.id } />
+                <PostCard key={ index } image={ doc.image } url={ doc.id } title={ doc.title } />
                 )
                 }) }
             </section>

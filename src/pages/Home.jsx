@@ -76,7 +76,7 @@ function Home() {
             <>
             { dataCats.map((data, index) => {
             return(
-                <PostCard key={ index} image={ data.image } url={ data.id } />
+                <PostCard key={ index } image={ data.image } url={ data.id } />
             )
             }) }
             </>

@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion"
 
 function PostCard({ image, url, title }) {
     return (
-    <Link to={ url } >
+    <Link to={ url } className="card-wrapper">
     <motion.div className="card"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -20,7 +20,12 @@ function PostCard({ image, url, title }) {
             />
     </motion.div>
     { title ? (
-        <h2>Cats</h2>
+        <motion.h1 className="card-title"
+        whileHover={{ opacity: .8 }}
+        whileTap={{ scale: .98 }}
+        >
+            { title } 
+        </motion.h1>
     ) : null}
     </Link>
     )
