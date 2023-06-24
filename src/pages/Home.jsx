@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { motion, useScroll, useTransform } from "framer-motion"
 import titleExplore from "/src/assets/title-explore.png"
@@ -7,6 +7,10 @@ import cardImage2 from "/src/assets/hero-2.png"
 import cardImage3 from "/src/assets/hero-3.png"
 import cardImage4 from "/src/assets/hero-4.png"
 import PostCard from "/src/components/PostCard"
+
+import { db } from "/src/config/firebase"
+import { collection, doc, getDoc, getDocs } from "firebase/firestore"
+
 import "./Home.scss"
 
 function Home() {
@@ -16,6 +20,23 @@ function Home() {
         [0, window.innerHeight * 2],
         [0, -400]
     )
+
+    const [catsStatus, setCatsStatus] = useState(0)
+    const [dataCats, setDataCats] = useState([])
+
+    useEffect(() => {
+        const getDocument = async () => {
+            const cats = await getDocs(collection(db, "blog"))
+            let catsTemp = []
+            cats.forEach((cat) => {
+                console.log(catsTemp.push( { "id": cat.id, ...cat.data() } ))
+            })
+            console.log(catsTemp)
+            setDataCats(catsTemp)
+            setCatsStatus(1)
+        }
+        getDocument()
+    }, [])
 
     return (
     <main id="home">
@@ -51,10 +72,15 @@ function Home() {
                 </div>
             </div>
             <div className="post-cards">
-                <PostCard image={ cardImage1 } url="/cat" />
-                <PostCard image={ cardImage2 } url="/dog" />
-                <PostCard image={ cardImage3 } url="/rabbit" />
-                <PostCard image={ cardImage4 } url="/alsocatuwu" />
+            { (catsStatus == 1) && (
+            <>
+            { dataCats.map((data, index) => {
+            return(
+                <PostCard key={ index} image={ data.image } url={ data.id } />
+            )
+            }) }
+            </>
+            )}
             </div>
         </section>
     </main>

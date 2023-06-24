@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Link, Navigate } from "react-router-dom"
 import { motion, useScroll, useTransform } from "framer-motion"
 
-function PostCard({ image, url }) {
+function PostCard({ image, url, title }) {
     return (
     <Link to={ url } >
     <motion.div className="card"
@@ -19,6 +19,9 @@ function PostCard({ image, url }) {
             transition={{ type: "spring" }}
             />
     </motion.div>
+    { title ? (
+        <h2>Cats</h2>
+    ) : null}
     </Link>
     )
 }
