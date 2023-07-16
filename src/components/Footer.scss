@@ -28,8 +28,9 @@ footer {
 
     .me {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         opacity: .8;
+        font-size: .9rem;
         transition: .2s;
 
         &:hover {
